@@ -3,7 +3,7 @@ package com.ipartek.formacion.hola.ejercicios;
 public class CalcularVueltas {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		float compra = (float) 1326.24;
 		float pago = 4 * 500;
 		float vueltas = (pago - compra);

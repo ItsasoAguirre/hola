@@ -5,7 +5,7 @@ import com.ipartek.formacion.hola.pojo.Receta;
 
 public class RecetaMarmitako {
 	public static Ingrediente[] ingredientes = new Ingrediente[13];
-	public Receta recetaMarmitakoAR = new Receta("Marmitako", null, 90, "media", 4,
+	public static Receta recetaMarmitakoAR = new Receta("Marmitako", null, 90, "media", 4,
 			"Corta el bonito en tacos y ponlos en un recipiente. Mezcla 20 g de sal con 1 l de agua, vierte la mezcla sobre el bonito y deja que macere durante 45 minutos aproximadamente. Pela los ajos, lamina y ponlos a rehogar en una cazuela grande un chorrito de aceite. Pica la cebolleta y el pimiento verde en dados y añádelos. Sazona y rehógalos bien.Agrega, el pan troceado, la guindilla cayena, los tomates secos y el pimiento choricero. Rehoga un poco, vierte el brandy y flambea. Cubre con el caldo de pescado. Pela y casca las patatas y añádelas. Cocina todo a fuego suave durante 20-30 minutos. Pon a punto de sal. Retira el pimiento choricero y los tomates secos y tritúralos con la batidora eléctrica. Vuelve a añadir a la cazuela e introduce el bonito (escurrido). Apaga el fuego y termina de cocinar con el calor residual durante unos minutos. Sirve el marmitako y decora con una hojita de perejil.");
 
 	static void setIngredientes() {
@@ -26,31 +26,21 @@ public class RecetaMarmitako {
 	}
 
 	static public void sacarPantalla() {
-		System.out.println(recetaMarmitako.titulo + tiempo + dificultad + comensales);
-		System.out.println("Gluten: ");
+		System.out.println(recetaMarmitakoAR.getTitulo() + recetaMarmitakoAR.getTiempo()
+				+ recetaMarmitakoAR.getDificultad() + recetaMarmitakoAR.getComensales());
+		System.out.println("Gluten: " + recetaMarmitakoAR.isGlutenFree());
 		System.out.println("+++++INGREDIENTES+++++");
 		for (int i = 0; i < ingredientes.length; i++) {
-			System.out.println(ingredientes[i].descripcionIngrediente());
+			System.out.println(ingredientes[i].getNombre() + ingredientes[i].getCantidad());
 		}
-		System.out.println(descripcion);
+		System.out.println(recetaMarmitakoAR.getDescripcion());
 
-	}
-
-	public String isGlutenFree() {
-
-		String glutenAnalizado = "no";
-		for (int i = 0; i < ingredientes.length; i++) {
-			if (ingredientes[i].isGluten() = true) {
-				glutenAnalizado = "si";
-			}
-		}
-		return glutenAnalizado;
 	}
 
 	public static void main(String[] args) {
-
+		Receta mamitako = new Receta("Mamitako by Karlos Arguiñano", ingredientes);
 		setIngredientes();
-		setDescripcion();
+
 		sacarPantalla();
 	}
 

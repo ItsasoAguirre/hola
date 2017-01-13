@@ -1,11 +1,12 @@
 package com.ipartek.formacion.hola.pojo;
 
 public class Ingrediente {
-
+	// atributos
 	private int cantidad;
 	private String nombre;
 	private boolean gluten;
 
+	// Constructor
 	public Ingrediente(int cantidadSet, String nombreSet, boolean glutenSet) {
 		this.cantidad = cantidadSet;
 		this.gluten = glutenSet;
