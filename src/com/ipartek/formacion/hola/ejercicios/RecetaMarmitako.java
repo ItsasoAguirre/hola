@@ -26,8 +26,9 @@ public class RecetaMarmitako {
 	}
 
 	static public void sacarPantalla() {
-		System.out.println(recetaMarmitakoAR.getTitulo() + recetaMarmitakoAR.getTiempo()
-				+ recetaMarmitakoAR.getDificultad() + recetaMarmitakoAR.getComensales());
+		System.out.println("Titulo de la receta: " + recetaMarmitakoAR.getTitulo() + " Tiempo necesario: "
+				+ recetaMarmitakoAR.getTiempo() + " minutos" + recetaMarmitakoAR.getDificultad()
+				+ recetaMarmitakoAR.getComensales());
 		System.out.println("Gluten: " + recetaMarmitakoAR.isGlutenFree());
 		System.out.println("+++++INGREDIENTES+++++");
 		for (int i = 0; i < ingredientes.length; i++) {

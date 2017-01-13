@@ -117,4 +117,21 @@ public class Receta {
 		return resultado;
 	}
 
+	public void addIngrediente(Ingrediente ingrediente) {
+
+	}
+
+	/**
+	 * Elimina el primer ingrediente que encuentre con el mismo
+	 * <code>nombre</code> CaseInsensitive
+	 * 
+	 * @param ingrediente
+	 *            ingrediente a eliminar
+	 * @return true si elimina ingrediente<br>
+	 *         false caso contrario
+	 */
+	public boolean removeIngrediente() {
+		return false;
+	}
+
 }
