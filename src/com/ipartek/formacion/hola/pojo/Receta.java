@@ -1,12 +1,13 @@
 package com.ipartek.formacion.hola.pojo;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Receta {
 
 	// Atributos
 	private String titulo;
-	private Ingrediente[] ingredientes;
+	private ArrayList<Ingrediente> ingredientes;
 	private int tiempo;
 	private String dificultad;
 	private int comensales;
@@ -14,7 +15,7 @@ public class Receta {
 
 	// CONSTRUCTORES
 
-	public Receta(String titulo, Ingrediente[] ingredientes, int tiempo, String dificultad, int comensales,
+	public Receta(String titulo, ArrayList<Ingrediente> ingredientes, int tiempo, String dificultad, int comensales,
 			String descripcion) {
 		super();
 		this.titulo = titulo;
@@ -25,7 +26,7 @@ public class Receta {
 		this.descripcion = descripcion;
 	}
 
-	public Receta(String titulo, Ingrediente[] ingredientes) {
+	public Receta(String titulo, ArrayList<Ingrediente> ingredientes) {
 		super();
 		this.titulo = titulo;
 		this.ingredientes = ingredientes;
@@ -50,11 +51,11 @@ public class Receta {
 		this.titulo = titulo;
 	}
 
-	public Ingrediente[] getIngredientes() {
+	public ArrayList<Ingrediente> getIngredientes() {
 		return ingredientes;
 	}
 
-	public void setIngredientes(Ingrediente[] ingredientes) {
+	public void setIngredientes(ArrayList<Ingrediente> ingredientes) {
 		this.ingredientes = ingredientes;
 	}
 
@@ -118,6 +119,7 @@ public class Receta {
 	}
 
 	public void addIngrediente(Ingrediente ingrediente) {
+		this.ingredientes.
 
 	}
 

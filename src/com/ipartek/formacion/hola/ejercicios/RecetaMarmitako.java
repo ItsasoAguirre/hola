@@ -27,9 +27,13 @@ public class RecetaMarmitako {
 
 	static public void sacarPantalla() {
 		System.out.println("Titulo de la receta: " + recetaMarmitakoAR.getTitulo() + " Tiempo necesario: "
-				+ recetaMarmitakoAR.getTiempo() + " minutos" + recetaMarmitakoAR.getDificultad()
-				+ recetaMarmitakoAR.getComensales());
-		System.out.println("Gluten: " + recetaMarmitakoAR.isGlutenFree());
+				+ recetaMarmitakoAR.getTiempo() + " minutos" + " Dificultad: " + recetaMarmitakoAR.getDificultad()
+				+ " Numero de comensales: " + recetaMarmitakoAR.getComensales());
+		if (recetaMarmitakoAR.isGlutenFree()) {
+			System.out.println("Receta libre de gluten");
+
+		}
+
 		System.out.println("+++++INGREDIENTES+++++");
 		for (int i = 0; i < ingredientes.length; i++) {
 			System.out.println(ingredientes[i].getNombre() + ingredientes[i].getCantidad());
